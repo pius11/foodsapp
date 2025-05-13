@@ -108,14 +108,15 @@ class _WebLoginState extends State<WebLogin> {
                 ButtonTheme(
                   minWidth: Get.width,
                   height: 60,
-                  // ignore: deprecated_member_use
-                  child: FlatButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(color: Colors.purple.shade800),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.purple.shade800,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        side: BorderSide(color: Colors.purple.shade800),
+                      ),
                     ),
-                    color: Colors.purple.shade800,
-                    textColor: Colors.white,
                     child: const Text(
                       "Login",
                       style: TextStyle(fontSize: 20),

@@ -120,16 +120,20 @@ class _SignUpPageState extends State<SignUpPage> {
                       ButtonTheme(
                         minWidth: 500,
                         height: 70,
-                        child: FlatButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(color: Colors.purple.shade800),
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                            backgroundColor: Colors.purple.shade800,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              side: BorderSide(color: Colors.purple.shade800),
+                            ),
                           ),
-                          color: Colors.purple.shade800,
-                          textColor: Colors.white,
-                          child: const Text("Register",
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          child: const Text(
+                            "Register",
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
                           onPressed: () =>
                               authC.signup(emailC.text, passwordC.text),
                         ),
@@ -140,13 +144,15 @@ class _SignUpPageState extends State<SignUpPage> {
                       ButtonTheme(
                         minWidth: 500,
                         height: 70,
-                        child: FlatButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: const BorderSide(color: Colors.indigo),
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: Colors.indigo,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              side: const BorderSide(color: Colors.indigo),
+                            ),
                           ),
-                          color: Colors.white,
-                          textColor: Colors.indigo,
                           child: const Text(
                             "Cancel",
                             style: TextStyle(

@@ -416,34 +416,29 @@ class _DetailScreen extends State<DetailScreen> {
                             // ignore: sized_box_for_whitespace
                             Container(
                               width: MediaQuery.of(context).size.width,
-                              child: RaisedButton(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      Dimensions.radius20),
-                                ),
-                                elevation: 0,
-                                focusElevation: 0,
-                                hoverElevation: 0,
-                                highlightElevation: 0,
-                                color: Colors.purple,
-                                child: Padding(
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.purple,
+                                  elevation: 0,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                        Dimensions.radius20),
+                                  ),
                                   padding: EdgeInsets.symmetric(
                                       vertical: Dimensions.height15),
-                                  child: Text(
-                                    "Beli",
-                                    style: poppinsTextStyle.copyWith(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                      color: whiteColor,
-                                    ),
+                                ),
+                                child: Text(
+                                  "Beli",
+                                  style: poppinsTextStyle.copyWith(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                    color: whiteColor,
                                   ),
                                 ),
                                 onPressed: () {
                                   launchUrl(
                                       "https://wa.me/6287860346608?text=saya%20ingin%20membeli%20$_name%20(%20$i%20Biji%20=%20Rp%20$pricePromo%20)%0ANama%3A%0AAlamat%3A%0ATolong%20di%20antar%20ya");
                                 },
-                                //https://wa.me/6282359342559?text=Saya%20ingin%20membeli%20$_name%20(%20$i%20Biji%20=%20Rp%20$pricePromo%20)
-                                // https://wa.me/6287860346608?text=saya%20ingin%20membeli%20$_name%20(%20$i%20Biji%20=%20Rp%20$pricePromo%20)%0Adata%20saya%0ANama%3A%0AAlamat%3A%0ATolong%20di%20antar%20ya
                               ),
                             ),
                           ],
